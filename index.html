@@ -1,0 +1,28 @@
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="refresh" content="120; URL=">
+  <title>秋谷アカデミー映像授業</title>
+  <script>
+    var xhr = new XMLHttpRequest(),json,
+        urlParams = new URLSearchParams(location.search),
+        id = urlParams.get('id');
+    xhr.onreadystatechange = function(){
+        if(this.readyState==4 && this.status==200){
+            let matchData = this.response.filter(function(item, index){
+                if (item.name == id) return true;
+            });
+            location.href = "matchData[0].id";
+        }
+    }
+    xhr.open('GET','https://script.google.com/macros/s/AKfycbz04Sj-ExumnccuoZGwBPxFYMcXDlCBWHlRhB8-67rsjlHR0yk8/exec', true );
+    xhr.setRequestHeader('Pragma', 'no-cache');   
+    xhr.setRequestHeader('Cache-Control', 'no-cache');                    
+    xhr.setRequestHeader('If-Modified-Since', 'Sat, 01 Jan 2000 00:00:00 GMT');
+    xhr.responseType = 'json';
+    xhr.send(null);
+  </script>
+</head>
+<body>
+    まだ授業は始まっていません。お待ちください。
+</body>
